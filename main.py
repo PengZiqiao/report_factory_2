@@ -34,7 +34,7 @@ def shuoli_data(g, dfs):
         elif wuye == '别墅':
             shuoli[wuye] = f'本周{wuye}市场{s.all()}\r补充说理。'
         else:
-            print('>>> 正在查询{wuye}排行...')
+            print(f'>>> 正在查询{wuye}排行...')
             rank_info = g.rank_shuoli(wuye)
             shuoli[wuye] = f'本周{wuye}市场{s.all()}\r本周成交面积榜单前三：{rank_info}'
     return shuoli
