@@ -65,7 +65,7 @@ class GetData:
         # 填充空行，修改列名
         index = ['城中', '城东', '城南', '河西', '城北', '仙林', '江宁', '浦口', '六合']
         df = pd.concat([pd.DataFrame(index=index), df], axis=1)
-        # df.iloc[:,:2] = df.iloc[:,:2].fillna(0)
+        df.iloc[:,:2] = df.iloc[:,:2].fillna(0)
         df.columns = ['上市面积(万㎡)', '成交面积(万㎡)', '成交均价(元/㎡)']
         return df.reindex(index)
 
